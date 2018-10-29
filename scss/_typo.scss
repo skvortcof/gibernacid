@@ -1,0 +1,173 @@
+body {
+  //https://uigradients.com/
+  font-family: $font-text;
+
+  background: $blue;
+  background: -webkit-linear-gradient(to right, $blue, $red);
+  background: linear-gradient(to right, $blue, $red);
+}
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, .5);
+}
+
+.br {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.column {
+  width: 760px;
+  margin: 0 auto;
+  background: #fff;
+  position: relative;
+  z-index: 1000;
+}
+
+.content {
+  padding: 30px;
+
+  p {
+    font-size: 19px;
+    line-height: 29px;
+    letter-spacing: -0.04em;
+  }
+}
+
+.title-space {
+  display: block;
+  height: 100px;
+}
+
+.proza {
+  p,
+  li {
+    font-size: 19px;
+    line-height: 29px;
+    letter-spacing: -0.04em;
+  }
+
+  p,
+  ul {
+    padding: 0 0 20px;
+  }
+}
+
+/* annotation */
+.annotation {
+  font-family: $font-info;
+  font-size: 13px;
+  background: #eee;
+  padding: 30px;
+
+  h3 {
+    font-family: $font-info;
+  }
+
+  ol {
+    li:first-child {
+      margin-top: 0;
+    }
+
+    li {
+      margin-top: 10px;
+    }
+  }
+
+}
+
+
+/* Figure */
+.figure {
+  margin: 0 auto;
+  padding: 35px 0;
+  text-align: center;
+
+  .text-img {
+    display: inline-block;
+    width: 100%;
+  }
+
+  .caption {
+    font-family: $font-info;
+    display: block;
+    text-align: center;
+    font-size: 13px;
+    padding: 10px 0 0;
+  }
+}
+
+
+
+
+/* Poem */
+.poem-title {
+  color: #fff;
+  padding: 0;
+  background: #fff;
+  position: relative;
+  height: 50px;
+  margin: -5px 0 0 -10px;
+
+  .part-title {
+    display: block;
+    font-size: 100px;
+    line-height: 100px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+
+  .poem-title-top {
+    left: 0;
+    top: -60px;
+
+    position: absolute;
+    overflow: hidden;
+    height: 60px;
+    background: #fff;
+
+    .part-title {
+      color: $red;
+    }
+  }
+
+  .poem-title-bottom {
+    position: absolute;
+    overflow: hidden;
+    height: 40px;
+    width: 100%;
+    left: 5px;
+
+    .part-title {
+      color: $blue;
+      position: absolute;
+      top: -70px;
+    }
+  }
+
+}
+
+.face {
+  width: 100%;
+}
+
+
+.panel-title {
+  margin-bottom: 100px;
+
+  .pt-header {
+    position: absolute;
+    background: #fff;
+    top: 50%;
+    left: -10px;
+    padding: 10px;
+    font-size: 40px;
+    letter-spacing: 3px;
+  }
+}

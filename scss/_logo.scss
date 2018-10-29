@@ -1,0 +1,84 @@
+.panel-logo {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  position: relative;
+  //background: #fff url('https://images.wallpaperscraft.com/image/ice_snow_stones_117524_3840x2400.jpg') center;
+  //background: #fff url('https://images.wallpaperscraft.com/image/ice_ice_floe_water_119108_3840x2400.jpg') center;
+  background: #fff url('../img/ice-bg.jpg') center;
+  //background: #fff url('https://c.wallhere.com/photos/a8/fc/2047x1342_px_ice_nature_road_Trees_winter-1324221.jpg!d') bottom;
+  //background: #fff url('../img/bg.jpg') center;
+
+
+
+
+  background-size: 100%;
+  margin: 100px 0;
+
+
+}
+
+
+//$logo-text-color: rgba(random(200) + 55, 40, random(200) + 55, 1);
+$logo-text-color: rgba(0, 120, 255, 1);
+
+.logo {
+  transform: rotateZ(-4deg);
+  position: relative;
+  z-index: 500;
+
+  .text {
+    background: #fff;
+    position: absolute;
+    font-size: $font-logo-size;
+    color: #fff;
+    line-height: $font-logo-size;
+    font-family: $font-logo-family;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: screen;
+    letter-spacing: 1rem;
+    overflow: hidden;
+    user-select: none;
+
+    @for $i from 0 through 40 {
+      $key: $i + 1;
+      &:nth-child(#{$key}) {
+        $row: floor($i / 20);
+        color: $logo-text-color;
+        clip-path: polygon(
+          $i * 5% - $row * 100% - random(2) $row * 50% - random(5),
+          $key * 5% - $row * 100% + random(5) $row * 50% - random(30),
+          $key * 5% - $row * 100% + random(5) $row * 50% + 50% + random(5),
+          $i * 5% - $row * 100% - random(2) $row * 50% + 50% + random(30)
+        );
+        filter: blur(#{random(20) - 10}px);
+        .text_inner1 {
+          animation: vertical random(1000) + 700ms random(100) + 0ms ease-in-out infinite alternate;
+        }
+        .text_inner2 {
+          animation: horizontal random(1000) + 700ms random(100) + 0ms ease-in-out infinite alternate;
+        }
+      }
+    }
+  }
+}
+
+@keyframes horizontal {
+  0% {
+    transform: translateX(6px);
+  }
+  100% {
+    transform: translateX(-6px);
+  }
+}
+@keyframes vertical {
+  0% {
+    transform: translateY(3px);
+  }
+  100% {
+    transform: translateY(-3px);
+  }
+}
