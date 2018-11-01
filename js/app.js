@@ -30,5 +30,13 @@
       auto: true
     });
 
+    var links = $('a');
+    links.link({
+      tabs: false,
+      links: false,
+      auto: true,
+      twitter: false
+    });
+
   });
 })(jQuery);

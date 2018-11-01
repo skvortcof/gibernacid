@@ -22,5 +22,15 @@
         return true;
       });
     });
+    $('.slider').bxSlider({
+      auto: true
+    });
+    var links = $('a');
+    links.link({
+      tabs: true,
+      links: false,
+      auto: true,
+      twitter: false
+    });
   });
 })(jQuery);
